@@ -1,0 +1,234 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:background="@color/colorAccent" />
+
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="55dp"
+                                android:orientation="vertical">
+
+                                <android.support.v7.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:background="@color/white"
+                                        app:cardCornerRadius="44dp">
+
+                                        <ImageView
+                                                android:layout_width="88dp"
+                                                android:layout_height="88dp"
+                                                android:src="@drawable/ojass_icon" />
+
+                                </android.support.v7.widget.CardView>
+
+                        </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/opensans_extrabold"
+                        android:text="OJASS 19"
+                        android:textColor="#636262"
+                        android:textSize="22sp" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="54dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="60dp"
+                        android:paddingRight="60dp"
+                        android:paddingBottom="60dp">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="Name"
+                                android:textColor="#B8C1C3"
+                                android:textSize="14sp" />
+
+                        <EditText
+                                android:id="@+id/name_field"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#667071"
+                                android:textSize="14sp" />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="Email"
+                                android:textColor="#B8C1C3"
+                                android:textSize="14sp" />
+
+                        <EditText
+                                android:id="@+id/email_field"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName"
+                                android:textColor="#667071"
+                                android:textSize="14sp" />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="Mobile Number"
+                                android:textColor="#B8C1C3"
+                                android:textSize="14sp" />
+
+                        <EditText
+                                android:id="@+id/phone_field"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="phone"
+                                android:textColor="#667071"
+                                android:textSize="14sp" />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="College / School"
+                                android:textColor="#B8C1C3"
+                                android:textSize="14sp" />
+
+                        <EditText
+                                android:id="@+id/college_field"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textColor="#667071"
+                                android:textSize="14sp" />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="College ID / Roll No"
+                                android:textColor="#B8C1C3"
+                                android:textSize="14sp" />
+
+                        <EditText
+                                android:id="@+id/college_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textColor="#667071"
+                                android:textSize="14sp" />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="Branch / Stream"
+                                android:textColor="#B8C1C3"
+                                android:textSize="14sp" />
+
+                        <EditText
+                                android:id="@+id/branch_field"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:textColor="#667071"
+                                android:textSize="14sp" />
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginTop="20dp">
+
+                                <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_weight="0.5"
+                                        android:fontFamily="@font/gothic_bold"
+                                        android:text="T-Shirt Size"
+                                        android:textColor="#B8C1C3"
+                                        android:textSize="14sp" />
+
+                                <Spinner
+                                        android:id="@+id/t_shirt_sizes"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_weight="0.5" />
+
+                        </LinearLayout>
+
+
+                        <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="54dp"
+                                app:cardElevation="4dp">
+
+                                <Button
+                                        android:id="@+id/register_action"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:alpha="0.92"
+                                        android:background="@color/colorAccent"
+                                        android:fontFamily="@font/opensans_extrabold"
+                                        android:paddingLeft="36dp"
+                                        android:paddingRight="36dp"
+                                        android:text="Register"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp" />
+
+                        </android.support.v7.widget.CardView>
+
+                        <TextView
+                                android:id="@+id/skip_action"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="18dp"
+                                android:fontFamily="@font/opensans_extrabold"
+                                android:text="Skip"
+                                android:textColor="#B8C1C3"
+                                android:textSize="15sp" />
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+</ScrollView>

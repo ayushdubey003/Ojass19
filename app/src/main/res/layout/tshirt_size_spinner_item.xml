@@ -1,0 +1,8 @@
+<!--TextView layout resource file for the T-shirt size spinner in the Registration Page-->
+<TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gothic_bold"
+        android:text="T-Shirt Size"
+        android:textColor="#B8C1C3"
+        android:textSize="14sp"
+        xmlns:android="http://schemas.android.com/apk/res/android"/>
