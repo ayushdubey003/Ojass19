@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+                android:id="@+id/pager_framelayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.view.ViewPager
+                        android:id="@+id/tutorial_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                <com.viewpagerindicator.CirclePageIndicator
+                        android:id="@+id/circle_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:layout_marginBottom="150dp"/>
+        </FrameLayout>
+
+        <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="64dp"
+                app:cardElevation="8dp"
+                android:alpha="0.98">
+
+                <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.92"
+                        android:background="@color/colorAccent"
+                        android:fontFamily="@font/opensans_extrabold"
+                        android:paddingLeft="32dp"
+                        android:paddingRight="32dp"
+                        android:text="Next"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+        </android.support.v7.widget.CardView>
+        
+</RelativeLayout>
