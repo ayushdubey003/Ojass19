@@ -16,6 +16,7 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -54,6 +55,14 @@ public class SplashScreenActivity extends Activity {
             @Override
             public void onAnimationEnd(Animator animation) {
                 SecondAnimation();
+                Button button=(Button)findViewById(R.id.button);
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent=new Intent(SplashScreenActivity.this,WalkthroughActivity.class);
+                        startActivity(intent);
+                    }
+                });
             }
 
             @Override

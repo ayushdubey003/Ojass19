@@ -69,12 +69,16 @@
             android:background="#2B535F"></LinearLayout>
 
         <Button
+            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_margin="16dp"
+            android:background="#2B525E"
+            android:fontFamily="@font/gothic_bold"
+            android:gravity="center"
             android:padding="8dp"
-            android:text="Jump In !" />
+            android:text="@string/button_text"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
 </LinearLayout>
