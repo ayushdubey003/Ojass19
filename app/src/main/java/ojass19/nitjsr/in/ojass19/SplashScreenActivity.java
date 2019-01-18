@@ -31,15 +31,15 @@ public class SplashScreenActivity extends Activity {
         double val = 0.0;
         if (density == 0.75)
             val = -225.0;
-        else if (density == 1.0)
+        else if (density <= 1.0)
             val = -220.0;
-        else if (density == 1.5)
+        else if (density <= 1.5)
             val = -410.0;
-        else if (density == 2.0)
+        else if (density <= 2.0)
             val = -600.0;
-        else if (density == 3.0)
-            val = -960.0;
-        else if (density == 4.0)
+        else if (density <= 3.0)
+            val = -1150.0;
+        else if (density <= 4.0)
             val = -1320.0;
         //Toast.makeText(this,Float.toString(density),Toast.LENGTH_LONG).show();
         final ImageView circle1 = (ImageView) findViewById(R.id.circle1);
@@ -61,6 +61,7 @@ public class SplashScreenActivity extends Activity {
                     public void onClick(View v) {
                         Intent intent=new Intent(SplashScreenActivity.this,WalkthroughActivity.class);
                         startActivity(intent);
+                        finish();
                     }
                 });
             }
