@@ -7,7 +7,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.View;
+import android.view.animation.Interpolator;
 import android.widget.Button;
 
 import com.viewpagerindicator.CirclePageIndicator;
@@ -40,12 +42,51 @@ public class WalkthroughActivity extends AppCompatActivity {
                                 //DO Nothing
                         }
 
+                        int animated = 0;
+
                         @Override
                         public void onPageSelected(int i) {
-                                if(i == PAGES - 1)
+
+                                final float factor = getResources().getDisplayMetrics().density / 3.0f;
+
+                                if (i == PAGES - 1) {
                                         button.setText("Sign Up");
-                                else
+                                        ((CardView) (findViewById(R.id.cover))).animate().
+                                                translationY(-500 * factor).withStartAction(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                        ((CardView) (findViewById(R.id.cover))).
+                                                                animate().scaleX(1.2f * factor)                                                                .withStartAction(new Runnable() {
+                                                                        @Override
+                                                                        public void run() {
+                                                                                ((CardView) (findViewById(R.id.cover)))
+                                                                                        .animate().scaleY(1.2f * factor);
+                                                                        }
+                                                                });
+                                                }
+                                        });
+                                        animated = 1;
+                                } else {
                                         button.setText("Next");
+                                        if (animated == 1) {
+                                                ((CardView) (findViewById(R.id.cover))).animate()
+                                                        .translationY(0 * factor).withStartAction(new Runnable() {
+                                                        @Override
+                                                        public void run() {
+                                                                ((CardView) (findViewById(R.id.cover)))
+                                                                        .animate().scaleX(1.0f).withStartAction(new Runnable() {
+                                                                        @Override
+                                                                        public void run() {
+                                                                                ((CardView) (findViewById(R.id.cover)))
+                                                                                        .animate().scaleY(1.0f);
+                                                                        }
+                                                                });
+                                                        }
+                                                });
+                                        }
+
+                                        animated = 0;
+                                }
                         }
 
                         @Override
@@ -58,9 +99,9 @@ public class WalkthroughActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View view) {
                                 int current_page = viewPager.getCurrentItem();
-                                if(current_page < PAGES - 1)
+                                if (current_page < PAGES - 1)
                                         viewPager.setCurrentItem(current_page + 1, true);
-                                else{
+                                else {
                                         //TODO: Make the user sign up through Google or Facebook here
                                         Intent intent = new Intent(WalkthroughActivity.this,login_activity.class);
                                         startActivity(intent);
@@ -71,7 +112,7 @@ public class WalkthroughActivity extends AppCompatActivity {
 
         }
 
-        public class MyFragmentAdapter extends FragmentPagerAdapter{
+        public class MyFragmentAdapter extends FragmentPagerAdapter {
 
                 public MyFragmentAdapter(FragmentManager fm) {
                         super(fm);
@@ -79,9 +120,9 @@ public class WalkthroughActivity extends AppCompatActivity {
 
                 @Override
                 public Fragment getItem(int i) {
-                        if(i == 0)
+                        if (i == 0)
                                 return First_Walkthrough_Fragment.newInstance();
-                        else if(i == 1)
+                        else if (i == 1)
                                 return Second_Walkthrough_Fragment.newInstance();
                         else
                                 return Third_Walkthrough_Fragment.newInstance();
