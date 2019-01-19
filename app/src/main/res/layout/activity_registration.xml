@@ -62,111 +62,115 @@
                         android:paddingRight="60dp"
                         android:paddingBottom="60dp">
 
-                        <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:fontFamily="@font/gothic_bold"
-                                android:text="Name"
-                                android:textColor="#B8C1C3"
-                                android:textSize="14sp" />
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="5dp"
+                            android:id="@+id/login_name_wrapper"
+                            >
 
-                        <EditText
-                                android:id="@+id/name_field"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:textColor="#667071"
-                                android:textSize="14sp" />
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/input_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Name"
+                                    android:inputType="text"
+                                    android:textColor="@color/textColor"
+                                    />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="5dp"
+                            android:id="@+id/login_email_wrapper"
+                            >
 
-                        <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginTop="16dp"
-                                android:fontFamily="@font/gothic_bold"
-                                android:text="Email"
-                                android:textColor="#B8C1C3"
-                                android:textSize="14sp" />
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/input_email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Email"
+                                    android:inputType="textEmailAddress"
+                                    android:textColor="@color/textColor"
+                                    />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="5dp"
+                            android:id="@+id/login_mobile_wrapper"
+                            >
 
-                        <EditText
-                                android:id="@+id/email_field"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:inputType="textPersonName"
-                                android:textColor="#667071"
-                                android:textSize="14sp" />
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/input_mobile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Mobile"
+                                    android:inputType="number"
+                                    android:textColor="@color/textColor"
+                                    />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="5dp"
+                            android:id="@+id/login_college_wrapper"
+                            >
 
-                        <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginTop="16dp"
-                                android:fontFamily="@font/gothic_bold"
-                                android:text="Mobile Number"
-                                android:textColor="#B8C1C3"
-                                android:textSize="14sp" />
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/input_college"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="College/School"
+                                    android:inputType="text"
+                                    android:textColor="@color/textColor"
+                                    />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="5dp"
+                            android:id="@+id/login_collegeid_wrapper"
+                            >
 
-                        <EditText
-                                android:id="@+id/phone_field"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:inputType="phone"
-                                android:textColor="#667071"
-                                android:textSize="14sp" />
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/input_regid"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="College reg. id/ Roll no."
+                                    android:inputType="none"
+                                    android:textColor="@color/textColor"
+                                    />
+                        </android.support.design.widget.TextInputLayout>
 
-                        <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginTop="16dp"
-                                android:fontFamily="@font/gothic_bold"
-                                android:text="College / School"
-                                android:textColor="#B8C1C3"
-                                android:textSize="14sp" />
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:padding="5dp"
+                            android:id="@+id/login_branch_wrapper"
+                            app:passwordToggleEnabled="true">
 
-                        <EditText
-                                android:id="@+id/college_field"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:inputType="text"
-                                android:textColor="#667071"
-                                android:textSize="14sp" />
-
-                        <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginTop="16dp"
-                                android:fontFamily="@font/gothic_bold"
-                                android:text="College ID / Roll No"
-                                android:textColor="#B8C1C3"
-                                android:textSize="14sp" />
-
-                        <EditText
-                                android:id="@+id/college_id"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:inputType="text"
-                                android:textColor="#667071"
-                                android:textSize="14sp" />
-
-                        <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginTop="16dp"
-                                android:fontFamily="@font/gothic_bold"
-                                android:text="Branch / Stream"
-                                android:textColor="#B8C1C3"
-                                android:textSize="14sp" />
-
-                        <EditText
-                                android:id="@+id/branch_field"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:inputType="text"
-                                android:textColor="#667071"
-                                android:textSize="14sp" />
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/input_branch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Branch/Stream"
+                                    android:inputType="text"
+                                    android:textColor="@color/textColor"
+                                    />
+                        </android.support.design.widget.TextInputLayout>
 
                         <LinearLayout
                                 android:layout_width="match_parent"
@@ -202,7 +206,7 @@
                                 app:cardElevation="4dp">
 
                                 <Button
-                                        android:id="@+id/register_action"
+                                        android:id="@+id/register_button"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:alpha="0.92"
@@ -217,7 +221,7 @@
                         </android.support.v7.widget.CardView>
 
                         <TextView
-                                android:id="@+id/skip_action"
+                                android:id="@+id/btn_skip_register"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"

@@ -62,7 +62,9 @@ public class WalkthroughActivity extends AppCompatActivity {
                                         viewPager.setCurrentItem(current_page + 1, true);
                                 else{
                                         //TODO: Make the user sign up through Google or Facebook here
-
+                                        Intent intent = new Intent(WalkthroughActivity.this,login_activity.class);
+                                        startActivity(intent);
+                                        finish();
                                 }
                         }
                 });
